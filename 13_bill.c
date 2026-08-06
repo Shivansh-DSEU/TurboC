@@ -14,13 +14,12 @@ int main() {
     } 
     else if (units <= 250) {
         bill = (50 * 0.50) + (100 * 0.75) + ((units - 150) * 1.20); 
-        // Note: Standard rate applied for 151-250 slab
+     
     } 
     else {
         bill = (50 * 0.50) + (100 * 0.75) + (100 * 1.20) + ((units - 250) * 1.50);
     }
 
-    // Add 20% surcharge
     total_bill = bill + (bill * 0.20);
 
     printf("Base Electricity Bill = Rs. %.2f\n", bill);

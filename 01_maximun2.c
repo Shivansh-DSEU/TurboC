@@ -10,12 +10,8 @@ int main()
     scanf("%d", &b);
 
     if (a > b)
-    {
         printf("Maximum is: %d\n", a);
-    }
     else
-    {
         printf("Maximum is: %d\n", b);
-    }
 
 }

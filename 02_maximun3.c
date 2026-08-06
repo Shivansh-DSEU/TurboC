@@ -14,16 +14,10 @@ int main()
     scanf("%d", &c);
 
     if (a > b && a > c)
-    {
         printf("Maximum is A");
-    }
     else if (b > a && b > c)
-    {
         printf("Maximum is B");
-    }
     else
-    {
         printf("Maximum is C");
-    }
     return 0;
 }

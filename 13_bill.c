@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+int main() {
+    float units, bill = 0, total_bill;
+
+    printf("Enter total electricity units consumed: ");
+    scanf("%f", &units);
+
+    if (units <= 50) {
+        bill = units * 0.50;
+    } 
+    else if (units <= 150) {
+        bill = (50 * 0.50) + ((units - 50) * 0.75);
+    } 
+    else if (units <= 250) {
+        bill = (50 * 0.50) + (100 * 0.75) + ((units - 150) * 1.20); 
+        // Note: Standard rate applied for 151-250 slab
+    } 
+    else {
+        bill = (50 * 0.50) + (100 * 0.75) + (100 * 1.20) + ((units - 250) * 1.50);
+    }
+
+    // Add 20% surcharge
+    total_bill = bill + (bill * 0.20);
+
+    printf("Base Electricity Bill = Rs. %.2f\n", bill);
+    printf("Total Bill (including 20%% surcharge) = Rs. %.2f\n", total_bill);
+
+    return 0;
+}
